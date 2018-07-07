@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Event</title>
+
+<!--    Still to give it second thought-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<link rel="stylesheet" href="./css/event.css">
+</head>
+
+<body>
+
+<!--  HEADER CONTENT -->
+
+	
+	<style>
+	header {
+	position: absolute;
+	width:100vw;
+	z-index: 3;
+	display: flex;
+	justify-content: space-between;
+/*	background: transparent;*/
+	flex-wrap: wrap;
+	padding: 8px 20px;
+	box-sizing: border-box;
+}
+
+.menu_items a {
+	font-family: Open Sans;
+	text-decoration: none;
+	color: azure;
+	display: inline-block;
+	padding: 5px;
+	background: rgba(250, 250, 250, 0.1);
+	letter-spacing: 2px;
+	border: solid 1px transparent;
+}
+		.menu_items a:hover {
+			border-color:white;
+		}
+.ces_logo img {
+	height: 50px;
+	
+}
+
+.menu {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	min-width: 331px;
+}
+
+.menu_items {
+	padding: 5px 20px;
+	margin: auto;
+}
+
+.ces_logo span {
+	font-size: 150%;
+	display: block;
+	font-family: Pacifico;
+	color: #fff;
+}
+.ces_logo span::first-letter {
+	font-size: 200%;
+}
+	</style>
+	<header>
+	
+		<div class="ces_logo"><span>CES</span></div>
+		<div class="menu">
+			<div class="menu_items"><a href="home.html">HOME</a></div>
+		<div class="menu_items"><a href="event.html">EVENTS</a></div>
+		<div class="menu_items"><a href="notice.html">NOTICE</a></div>
+		<div class="menu_items"><a href="#">GALLERY</a></div>
+		<div class="menu_items"><a href="members.html">MEMBERS</a></div>
+		<div class="menu_items"><a href="http://mmmut.ac.in">MMMUT</a></div>
+		</div>
+	<div class="burger_menu" onclick="document.querySelector('.side_menu').style.transform='translate(0,0)'; console.log('dsdf');" >
+    <div class="burger">
+      <div class="b-1 b"></div>
+      <div class="b-2 b"></div>
+      <div class="b-3 b"></div>
+    </div>
+  </div>
+	</header>	
+	<div class="side_menu">
+	<div class="cross" onclick="this.parentNode.style.transform='translate(110%, 0)';">
+		<div class="c-1"></div>
+		<div class="c-2"></div>
+	</div>
+  <ul>
+    <li><a href="home.html">HOME</a></li>
+    <li><a href="event.html">EVENTS</a></li>
+    <li><a href="notice.html">NOTICE</a></li>
+    <li><a href="#">GALLERY</a></li>
+    <li><a href="members.html">MEMBERS</a></li>
+    <li><a href="subscribe.html">SUBSCRIBE</a></li>
+  </ul>
+</div>
+<!--
+<header style="height: 80px; z-index: 5; position: absolute; width:99vw;" >
+  <div class="ces_logo"> </div>
+  <div class="mmmut_logo"> </div>
+  <div class="exit" onClick="toggle_header();">
+    <div class="l"></div>
+    <div class="r"></div>
+  </div>
+  <div class="header">
+    <div class="outer_circ" onClick="toggle_header();">
+      <div class="b-1 burger"></div>
+      <div class="b-2 burger"></div>
+      <div class="b-3 burger"></div>
+    </div>
+  </div>
+  <div class="header_content">
+    <div class="cross" >
+      <ul>
+        <li><a href="home.html">HOME</a>
+          <div class="h_liner"></div>
+        </li>
+        <li>EVENTS
+          <div class="h_liner selected"></div>
+        </li>
+        <li><a href="notice.html">NOTICE</a>
+          <div class="h_liner"></div>
+        </li>
+        <li><a href="#">GALLERY</a>
+          <div class="h_liner"></div>
+        </li>
+        <li><a href="members.html">MEMBERS</a>
+          <div class="h_liner"></div>
+        </li>
+        <li><a href="http://mmmut.ac.in" target="_blank">MMMUT</a>
+          <div class="h_liner"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+-->
+
+<!--  HEADER CONTENT -->
+
+<div class="main"> </div>
+<div id="event-main-div">
+  <div id="event-header">
+    <div class="event-tab-container">
+      <div id="upcoming-event-tab" class="event-header-element" onclick="myScrollTo('upcoming-events');"> <span style="display: inline-block;">Upcoming</span>
+        <div class="liner"></div>
+      </div>
+      <div id="ennexes-events-tab" class="event-header-element" onclick="myScrollTo('ennexes-events');"> <span style="display: inline-block; ">Ennexes</span>
+        <div class="liner"></div>
+      </div>
+      <div id="archived-events-tab" class="event-header-element" onclick="myScrollTo('archived-events');"><span style="display: inline-block;">Archive</span>
+        <div class="liner"></div>
+      </div>
+    </div>
+  </div>
+  <div id="upcoming-events" class="event-display">
+    <div class="event-display-heading">
+      <div style="width: 96%; position: relative; right: 0px; height: 4px; background: #dbdbdb; top: 13px;"></div>
+      <span class="event-type-heading"> Upcoming Events:&nbsp;&nbsp;&nbsp;</span> </div>
+    <div class="event-box-container">
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"> <span>Security Challenge</span> <span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"><span>Security Challenge</span><span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"><span>Security Challenge</span><span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+    </div>
+  </div>
+  <div id="ennexes-events" class="event-display">
+    <div class="event-display-heading">
+      <div style="width: 96%;; position: relative; right: 0px; height: 4px; background: #dbdbdb; top: 13px;"></div>
+      <span class="event-type-heading"> Ennexes Events:&nbsp;&nbsp;&nbsp;</span> </div>
+    <div class="event-box-container">
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"><span>Security Challenge</span><span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"><span>Security Challenge</span><span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"><span>Security Challenge</span><span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"><span>Security Challenge</span><span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"><span>Security Challenge</span><span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"><span>Security Challenge</span><span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+    </div>
+  </div>
+  <div id="archived-events" class="event-display">
+    <div class="event-display-heading">
+      <div style="width: 96%; position: relative; right: 0px; height: 4px; background: #dbdb; top: 13px;"></div>
+      <span class="event-type-heading"> Archived Events:&nbsp;&nbsp;&nbsp;</span> </div>
+    <div class="event-box-container">
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"><span>Security Challenge</span><span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"><span>Security Challenge</span><span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"><span>Security Challenge</span><span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"><span>Security Challenge</span><span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"><span>Security Challenge</span><span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"><span>Security Challenge</span><span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"><span>Security Challenge</span><span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+      <div class="event-div" onmouseover="this.parentNode.style.zIndex= '3';" onmouseleave="this.parentNode.style.zIndex= '0';">
+        <div class="event-div-poster"></div>
+        <div class="event-div-title"><span>Security Challenge</span><span> Hack Down </span></div>
+        <input type="button" class="know-more-button" value="Know More">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="footer_info developers"> <span> Prominent developers </span> </div>
+  <div class="footer_info contact"> <span> Contact us </span> </div>
+  <div class="footer_info contact"> <span> Contact us </span> </div>
+</footer>
+
+<!-- FOOTER -->
+
+</body>
+<script>
+   var scrollY = 0;
+    var speed = 2;
+    var animator = 0;
+    function myScrollTo(element) {
+        var t = document.getElementById(element).getBoundingClientRect().top;
+        var currentScroll = window.pageYOffset;
+        var final = currentScroll + t - 80;
+        if (t > 80 ) {
+            //console.log("t > 80 " +t+" > 80");
+            myScroll(final, (t - 80) / 150, 0);
+        } else {
+            //console.log("u t > 80 " +t+" > 80");
+            myScrollUp(final, (t - 80) / 150, 0);
+        }
+    }
+
+    function myScroll(final, distance, count) {
+        count += 1
+        var currentY = window.pageYOffset;
+        var targetY = final;
+        var bodyHeight = document.body.offsetHeight;
+        var yPos = currentY + window.innerHeight;
+        animator = setTimeout('myScroll(' + final + ',' + distance + ',' + count + ')', speed);
+        if (currentY >= targetY || count > 750) {
+            clearTimeout(animator);
+            animator = 0;
+        } else {
+            if (currentY < targetY - distance) {
+                scrollY = currentY + distance;
+                window.scrollTo(0, scrollY);
+            } else {
+                clearTimeout(animator);
+                animator = 0;
+            }
+        }
+    }
+
+    function myScrollUp(final, distance, count) {
+        count += 1
+        var currentY = window.pageYOffset;
+        var targetY = final;
+        var bodyHeight = document.body.offsetHeight;
+        var yPos = currentY + window.innerHeight;
+        var animator = setTimeout('myScrollUp(' + final + ',' + distance + ',' + count + ')', speed);
+        if (currentY <= targetY || count > 750) {
+            clearTimeout(animator);
+            animator = 0;
+        } else {
+            if (currentY > targetY - distance) {
+                scrollY = currentY + distance;
+                window.scrollTo(0, scrollY);
+            } else {
+                clearTimeout(animator);
+                animator = 0;
+            }
+        }
+    }
+    
+</script>
+
+</html>

@@ -1,0 +1,262 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	/*
+    background-image: linear-gradient(50deg, rgba(256, 0, 256, 0.6), lightblue, #06BCFF);
+    background-size: 700% 200%;
+    animation: 7s grad infinite alternate ease-in-out;
+*/
+}
+ @keyframes grad {
+ 0% {
+ background-position: 0, 50%;
+}
+ 100% {
+ background-position: 100%, 50%;
+}
+}
+#event-main-div {
+	width: 90%;
+	height: 100%;
+	margin: auto;
+	margin-top: 100px;
+	top: 100px;
+	overflow-x: none;
+}
+#event-header {
+	height: 45px;
+	position: sticky;
+	top:80px;
+	z-index: 6;
+	margin-bottom: 30px;
+	background: white;
+	box-shadow: -5px 0px 0px 20px #fff;
+}
+.event-display {
+	margin-top: 10px;
+	position: relative;
+	width: 100%;
+}
+.event-header-element {
+	cursor: pointer;
+	font-family: 'Open Sans';
+	width: 110px;
+	text-align: center;
+	padding: 8px;
+	margin-right: 2px;
+	position: relative;
+	float: left;
+	color: #fff;
+	background: #0099B8;
+}
+.event-header-element:last-of-type {
+	margin-right: 0px;
+}
+.event-box-container {
+	position: relative;
+	perspective: 100px;
+	display: flex;
+	align-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	padding: 10px;
+}
+.event-display-heading {
+	top: 0px;
+	height: 55px;
+	position: relative;
+	font-family: 'Open Sans' !important;
+}
+.event-div {
+	overflow: hidden;
+	height: 230px;
+	box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
+	width: 201px;
+	margin-bottom: 15px;
+	margin-right: 34px;
+	position: relative;
+	background: #fff;
+	align-self: center;/*	#e8eaf6;*/
+}
+.event-div-poster {
+	width: 100%;
+	height: 50%;
+	background-size: cover;
+}
+.event-div-title {
+	font-family: sans-serif;
+	width: 100%;
+	height: 60px;
+	text-align: center;
+}
+.event-div-title span:nth-of-type(1) {
+	width: 100%;
+	display: block;
+	text-transform: uppercase;
+	padding: 3px 0px;
+	font-size: 70%;
+	color: grey;
+	letter-spacing: 2px;
+	background: #dbdbdb;
+	transform: scale(1, 1.1);
+}
+.event-div-title span:nth-of-type(2) {
+	width: 100%;
+	display: block;
+	position: absolute;
+	margin-top: 10px;
+	text-transform: uppercase;
+	font-size: 75%;
+	color: lightcoral;
+	letter-spacing: 1px;
+}
+.event-type-heading {
+	font-weight: 500;
+	font-family: 'Roboto';
+	font-size: 18px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	background: #fff;
+	
+}
+.know-more-button {
+	position: absolute;
+	left: 50px;
+	width: 100px;
+	height: 30px;
+	border: none;
+	background: #06bcff;
+	cursor: pointer;
+	border-radius: 5px;
+	color: #fff;
+    text-align: center;
+}
+.know-more-button:hover {
+	background: #90caf9;
+}
+.glass {
+	transition-duration: 0.7s;
+	position: absolute;
+	z-index: 2;
+	height: 15px;
+	width: 550px;
+	bottom: 100%;
+	background: rgba(255, 255, 255, 0.7);
+	margin-left: -50px;
+	transform: rotate(30deg);
+}
+.event-div:hover .glass {
+	bottom: -80%;
+	background: rgba(255, 255, 255, 0.4);
+}
+.event-div:hover {
+	z-index: 3;
+	animation: 0.7s from_top 1 alternate ease-out forwards;
+}
+ @keyframes from_top {
+ 0% {
+ transform-origin: 50% 0%;
+ transform: rotateX(0deg) scale(1, 1);
+ box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+ 45% {
+ transform: rotateX(-4deg) scale(1.15, 1.15);
+}
+ 100% {
+ box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+ transform: scale(1.2, 1.2);
+}
+}
+.event-tab-container {
+	margin-top: 30px;
+	
+	box-shadow: 0px 0px 10px #fff;
+}
+
+@media (max-width:798px) and (min-width:690px){
+	.event-box-container {
+		align-content: space-around;
+	}
+	.event-div {
+		margin: auto;
+		margin-top: 15px;
+	}
+}
+
+@media (max-width:536px) {
+	.event-box-container {
+		align-content: space-around;
+	}
+	.event-div {
+		margin: auto;
+		margin-top: 15px;
+	}
+}
+
+.main {
+/*	margin-top: 40px;*/
+	margin-bottom: -40px;
+	height: 600px;
+	max-height: 90vh;
+	background: url(../images/Event.png) no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+}
+
+.welcome-text {
+	margin: auto;
+	font-family: 'Open Sans';
+	font-size: 500%;
+	
+}
+
+.liner {
+	height: 2px;
+	background: #4FFD34;
+	border-radius: 10px;
+	width: 0px;
+	transition-duration: 0.5s;
+}
+
+.event-header-element:hover .liner {
+	width: 100%;
+}
+
+#new-group-form {
+   left: 0;
+   top: 0;
+   width: 100vw;
+   height: 100vh;
+   background: rgba(37,35,35,0.7);
+   z-index: 10;
+   position:fixed;
+   display: none;
+}
+
+
+
+
+
+#new-group-form-closing {
+   width:80px;
+   height: 80px;
+   right: 50px;
+   bottom: 50px;
+   position: absolute;
+   border-radius: 50px; 
+   cursor: pointer;
+}
+
+.myburger {
+   width: 80px;
+   height: 12px;
+   background: white;
+   position: absolute;
+   border-radius: 7px;
+   top: 34px;
+}

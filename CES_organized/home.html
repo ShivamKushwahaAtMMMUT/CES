@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="./images/ces_logo.jpg" />
+<link rel="stylesheet" href="./css/home.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CES</title>
+</head>
+
+<body>
+
+<!--  ///////////////////////////           HEaDer        ///////////////////// --> 
+<!--                                                                            -->
+
+<style>
+		
+header {
+	position: absolute;
+	width:100vw;
+	z-index: 3;
+	display: flex;
+	justify-content: space-between;
+/*	background: transparent;*/
+	flex-wrap: wrap;
+	padding: 8px 20px;
+	box-sizing: border-box;
+}
+
+.menu_items a {
+	font-family: Open Sans;
+	text-decoration: none;
+	color: azure;
+	display: inline-block;
+	padding: 5px;
+	background: rgba(250, 250, 250, 0.1);
+	letter-spacing: 2px;
+	border: solid 1px transparent;
+}
+		.menu_items a:hover {
+			border-color:white;
+		}
+.ces_logo img {
+	height: 50px;
+	
+}
+
+.menu {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	min-width: 331px;
+}
+
+.menu_items {
+	padding: 5px 20px;
+	margin: auto;
+}
+
+.ces_logo span {
+	font-size: 150%;
+	display: block;
+	font-family: Pacifico;
+	color: #fff;
+}
+.ces_logo span::first-letter {
+	font-size: 200%;
+}
+
+	</style>
+<header>
+  <div class="ces_logo"><span>CES</span></div>
+  <div class="menu">
+    <div class="menu_items"><a href="home.html">HOME</a></div>
+    <div class="menu_items"><a href="event.html">EVENTS</a></div>
+    <div class="menu_items"><a href="notice.html">NOTICE</a></div>
+    <div class="menu_items"><a href="#">GALLERY</a></div>
+    <div class="menu_items"><a href="members.html">MEMBERS</a></div>
+    <div class="menu_items"><a href="subscribe.html">SUBSCRIBE</a></div>
+  </div>
+  <div class="burger_menu" onclick="document.querySelector('.side_menu').style.transform='translate(0,0)'; console.log('dsdf');" >
+    <div class="burger">
+      <div class="b-1 b"></div>
+      <div class="b-2 b"></div>
+      <div class="b-3 b"></div>
+    </div>
+  </div>
+</header>
+<div class="side_menu">
+  <div class="cross" onclick="this.parentNode.style.transform='translate(110%, 0)';">
+    <div class="c-1"></div>
+    <div class="c-2"></div>
+  </div>
+  <ul>
+    <li><a href="home.html">HOME</a></li>
+    <li><a href="event.html">EVENTS</a></li>
+    <li><a href="notice.html">NOTICE</a></li>
+    <li><a href="#">GALLERY</a></li>
+    <li><a href="members.html">MEMBERS</a></li>
+    <li><a href="subscribe.html">SUBSCRIBE</a></li>
+  </ul>
+</div>
+<div class="main">
+  <div class="cse">
+    <div class="cse_decl">
+      <div class="cse_anim delay_1">Computer</div>
+      <div class="cse_anim delay_2">Engineering</div>
+      <div class="cse_anim delay_3">Society</div>
+      <span style="font-size: 16px; color: #202B36;">Madan Mohan Malaviya University of Technology</span> </div>
+    <div class="mmmut"> <a href="http://mmmut.ac.in" target="_blank">MMMUT</a> </div>
+  </div>
+</div>
+
+<!--	<div class="content"> </div>-->
+<div class="about_society">
+  <div class="declaring_society"> CES @ glance... </div>
+  <div class="about_society_content">
+    <p>The Computer Engineering Society has been functioning since 1993 with the collective effort of a group of B.Tech and MCA students who had a strong urge to complement the theoretical and practical knowledge imparted in the classroom and laboratory, with emphasis on development of overall personality of budding engineering graduates.</p>
+    <p> With a humble beginning, the society has grown steadily to it present strength of more than 300 student as well as teacher members and is one of the most active and popular technical societies in the campus. The society can proudly boast of having committed members."</p>
+    <p>"It provides a platform to the students to share and increase their 'engineering' know-how through increased interaction between students at all levels, group activity, brainstorming to name a few.</p>
+  </div>
+</div>
+<div class="society_officials">
+  <div class="declaring_heading">Faculty Mentors</div>
+  <div class="mentors">
+    <div class="mentor_container">
+      <div class="mentor_img">
+        <div class="img"> </div>
+      </div>
+      <div class="mentor_name"> Shivam Verma<br>
+        <span>PRESIDENT</span><br>
+        <br>
+        <span style="color:#121213; font-size: 15px; font-weight: 100; font-style: italic; ">"Professional Post in the University"</span> </div>
+    </div>
+    <div class="mentor_container">
+      <div class="mentor_img">
+        <div class="img"> </div>
+      </div>
+      <div class="mentor_name"> Shivam verma<br>
+        <span>VICE PRESIDENT</span><br>
+        <br>
+        <span style="color:#121213; font-size: 15px; font-weight: 100; font-style: italic; ">"Assistant Professor Post in the University"</span> </div>
+    </div>
+    <div class="mentor_container">
+      <div class="mentor_img">
+        <div class="img"> </div>
+      </div>
+      <div class="mentor_name"> Rakesk Kumar<br>
+        <span>HEAD OF DEPARTMENT</span><br>
+        <br>
+        <span style="color:#121213; font-size: 15px; font-weight: 100; font-style: italic; ">"Still trying to find something good"</span> </div>
+    </div>
+  </div>
+</div>
+	
+<footer> 
+	<div class="footer_mmmut">
+		<div class="footer_mmmut_img"></div>
+		<div class="contacts">
+			<div class="footer_name">MADAN MOHAN MALAVIYA UNIVERSITY OF TECHNOLOGY<br>GORAKHPUR</div>
+			<div class="footer_email">phalanadhikana@gmail.com</div>
+			<div class="footer_phone">4204204204</div>
+		</div>
+	</div>
+	<div class="footer_mmmut">
+		<div class="footer_ces_img"></div>
+		<div class="contacts">
+			<div class="footer_name">COMPUTER ENGINEERING SOCIETY </div>
+			<div class="footer_email">something@gmail.com</div>
+			<div class="footer_phone">4204204204</div>
+		</div>
+	</div>
+	
+	<div class="socials">
+			<div class="social_icons">
+			<div class="fb"></div>
+			<div class="in"></div>
+			<div class="twitter"></div>
+		</div>
+	</div>
+	
+</footer>
+	
+</body>
+</html>

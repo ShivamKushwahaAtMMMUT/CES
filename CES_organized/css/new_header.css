@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+/*	background: #405588;*/
+	flex-wrap: wrap;
+	padding: 8px 10px;
+}
+
+.menu_items a {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	text-decoration: none;
+	color: #fff;
+}
+
+.ces_logo {
+/*	padding: 4px;*/
+}
+
+.ces_logo img {
+	height: 50px;
+	
+}
+
+.menu {
+	display: flex;
+	justify-content: center;
+}
+
+.menu_items {
+	padding: 0 1.2vw;
+	margin: auto;
+	border-right: solid 1px magenta;
+	font-weight: 100;
+}
+.menu_items:last-of-type{
+	border-right: none;
+}
+
+.ces_logo span {
+	font-size: 150%;
+	display: block;
+	font-family: Pacifico;
+	color: #fff;
+}
+.ces_logo span::first-letter {
+	font-size: 200%;
+}
